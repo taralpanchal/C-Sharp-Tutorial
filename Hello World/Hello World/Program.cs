@@ -6,23 +6,17 @@ namespace Hello_World
     {
         static void Main(string[] args)
         {
-            try
-            {
-                var number = 52;
-                string str = "Hello";
-                byte b = Convert.ToByte(number);
-                char c = Convert.ToChar(number);
-                bool bl = Convert.ToBoolean(str);
-                Console.WriteLine(b);
-                Console.WriteLine(c);
-                Console.WriteLine(bl);
+            var a = 10;
+            var b = 5;
+            var c = 3;
+            Console.WriteLine( a + b + c);
+            Console.WriteLine((float)a / b);
+            Console.WriteLine(a + b * c);
+            Console.WriteLine(a > b);
+            Console.WriteLine(a != b);
+            Console.WriteLine((c > b || c < a));
 
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("The number could not be convert to a byte");
-            }
         }
     }
  }
-      
+        
