@@ -1,26 +1,29 @@
 ﻿using System;
 
 
-namespace Hello_World { 
+namespace Hello_World
+{
+    public enum ShippingMethod
+    {
+        RegularAirMail = 1,
+        RegularedAirMail = 2,
+        Express = 3
+    }
     class Program
-    { 
+    {
         static void Main(string[] args)
         {
-            var numbers = new int[3];
-            numbers[0] = 1;
-            numbers[1] = 2;
-            numbers[2] = 3;
-            Console.WriteLine(numbers[0]);
-            Console.WriteLine(numbers[1]);
-            Console.WriteLine(numbers[2]);
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int)method);
 
-            var name = new string[3] { "Taral", "Hardip", "Rajesh" };
-            Console.WriteLine(name[0]);
-            Console.WriteLine(name[1]);
-            Console.WriteLine(name[2]);
+            var methodId = 2;
+            Console.WriteLine((ShippingMethod)methodId);
+            Console.WriteLine(method.ToString());
 
-
+            var methodName = "2";
+            var shippingMethod = (ShippingMethod)Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(shippingMethod);
         }
+
     }
- }
-         
+}
