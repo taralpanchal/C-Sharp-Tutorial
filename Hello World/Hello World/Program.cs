@@ -19,14 +19,16 @@ namespace Hello_World
 
 
 
-             int randompassword = 10;
-            var buffer = new char[randompassword];
-            for (var i = 0; i < randompassword; i++)
+            const int passwordlenght = 10;
+
+            var buffer = new char[passwordlenght];
+
+            for (var i = 0; i < passwordlenght; i++)
             {
                  buffer[i] = (char)('a' + random.Next(0,26));
+            }
                 var password = new string(buffer);
                 Console.WriteLine(password);
-            }
 
         }
     }
