@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+
 
 namespace Hello_World
 {
@@ -8,19 +8,24 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            var datetime = new DateTime(2021,03,12);
+            var timespan = new TimeSpan(1, 2, 3);
+            Console.WriteLine(timespan);
+            var hour = TimeSpan.FromHours(3);
 
-            var now = DateTime.Now;
-            var today = DateTime.Today;
+            var addmintes = timespan.Add(TimeSpan.FromMinutes(8));
+            Console.WriteLine("Add Minutes: "+addmintes);
 
-            Console.WriteLine(now.ToLongDateString());
-            Console.WriteLine(now.ToShortTimeString());
-            Console.WriteLine(now.ToShortDateString());
-            Console.WriteLine(now.ToLongTimeString());
+            var sbtract = timespan.Subtract(TimeSpan.FromMinutes(5));
+            Console.WriteLine("subtract: "+sbtract);
 
-            Console.WriteLine(now);
-            Console.WriteLine(today);
+            Console.WriteLine("Minutes:" +timespan.Minutes);
+            Console.WriteLine("Total Minutes: "+timespan.TotalMinutes);
 
+           
+
+            //Console.WriteLine(TimeSpan.Parse("01-03-05"));
+
+                
         }
     }
 }
