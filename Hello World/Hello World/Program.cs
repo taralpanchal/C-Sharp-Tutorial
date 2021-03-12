@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Hello_World
 {
@@ -7,41 +8,32 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-
-            var number = new[] { 2,5,6,8,9,10,1,5};
-            
-            //lenght
-            
-            Console.WriteLine("Length: " + number.Length);
-            
-            //Index of
-            Console.WriteLine(" Index Of: " + Array.IndexOf(number,10));
-
-            //clear
-            Array.Clear(number, 0, 2);
-            Console.WriteLine("Effect of clear:");
-            foreach( var i in number)
+            //add element
+            var number = new List<int> () {2,5,6,8,9,10,1,5};
+            number.Add(1); 
+           
+            //Add Range 
+            number.AddRange(new int[] { 10, 12, 13 });
+            foreach(var i in number)
             {
                 Console.WriteLine(i);
             }
 
-            //copy
-            int[] another = new int[5];
-            Array.Copy(number, another, 5);
-            Console.WriteLine("Copy array: ");
-            foreach (var i in another)
-            {
-                Console.WriteLine(i);
-            }
+            
+            Console.WriteLine("index of 10: " + number.IndexOf(5));
+            //count number
+            Console.WriteLine("Count: "+number.Count);
+            //Index
+            Console.WriteLine("Last Index:"+number.LastIndexOf(10));
 
-            //sort
-
-            Array.Sort(number);
-            Console.WriteLine("Soring Effect:");
+            //remove
+            number.Remove(5);
+        
             foreach(var i in number)
                 Console.WriteLine(i);
-            Array.Reverse(number);
 
+           //clear list
+           number.Clear();
         }
     }
 }
