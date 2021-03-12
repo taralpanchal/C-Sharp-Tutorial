@@ -8,32 +8,19 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            //add element
-            var number = new List<int> () {2,5,6,8,9,10,1,5};
-            number.Add(1); 
-           
-            //Add Range 
-            number.AddRange(new int[] { 10, 12, 13 });
-            foreach(var i in number)
-            {
-                Console.WriteLine(i);
-            }
+            var datetime = new DateTime(2021,03,12);
 
-            
-            Console.WriteLine("index of 10: " + number.IndexOf(5));
-            //count number
-            Console.WriteLine("Count: "+number.Count);
-            //Index
-            Console.WriteLine("Last Index:"+number.LastIndexOf(10));
+            var now = DateTime.Now;
+            var today = DateTime.Today;
 
-            //remove
-            number.Remove(5);
-        
-            foreach(var i in number)
-                Console.WriteLine(i);
+            Console.WriteLine(now.ToLongDateString());
+            Console.WriteLine(now.ToShortTimeString());
+            Console.WriteLine(now.ToShortDateString());
+            Console.WriteLine(now.ToLongTimeString());
 
-           //clear list
-           number.Clear();
+            Console.WriteLine(now);
+            Console.WriteLine(today);
+
         }
     }
 }
