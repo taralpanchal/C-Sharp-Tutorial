@@ -5,21 +5,28 @@ namespace Hello_World
 {
     class Program
     {
-        static void Main(string[] args)
-
+        public class Person
         {
-            var a = 10;
-            var b = a;
-            b++;
-            Console.WriteLine(string.Format("a : {0} , b : {1}",a ,b));
+            public int Age;
+        }
 
-            var array1 = new int[3] { 1, 2, 3 };
-            var array2 = array1;
-            array2[0] = 0;
-            Console.WriteLine(string.Format("array[0] : {0}, array[0] : {1}",array1[1],array2[1]));
-            Console.WriteLine(array1[0]);
-            Console.WriteLine(array1[1]);
-            Console.WriteLine(array1[2]);
+        static void Main(string[] args)
+        {
+            var number = 1;
+            Increment(number);
+            Console.WriteLine(number);
+
+            Person person = new Person() { Age = 30 };
+            makeOld(person);
+            Console.WriteLine(person.Age);
+        }
+        public static void Increment( int number)
+        {
+            number+=10;
+        }
+        public static void makeOld(Person person)
+        {
+            person.Age += 10;
         }
 
     }
