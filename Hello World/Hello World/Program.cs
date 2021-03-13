@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 
 namespace Hello_World
@@ -9,9 +10,17 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            string sentence = "This is realy realy realy long Text ";
-            var summary = StringUtility.SummerizeText(sentence, 25);
-            Console.WriteLine(summary);
+            var builder = new StringBuilder();
+            builder.Append('*', 10)
+                .AppendLine()
+                .AppendLine()
+                .Append('*', 10)
+                .Insert(5, "@", 3)
+                .Replace("@", "$")
+                .Remove(5, 3)
+                .Clear()
+                .Append("Header");
+            Console.WriteLine(builder);
         }
         
     }
