@@ -8,24 +8,35 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            var timespan = new TimeSpan(1, 2, 3);
-            Console.WriteLine(timespan);
-            var hour = TimeSpan.FromHours(3);
+            var fullname = "Mosh Hamedani Mosh ";
 
-            var addmintes = timespan.Add(TimeSpan.FromMinutes(8));
-            Console.WriteLine("Add Minutes: "+addmintes);
+            Console.WriteLine("Last Index of :" + fullname.LastIndexOf("M"));
 
-            var sbtract = timespan.Subtract(TimeSpan.FromMinutes(5));
-            Console.WriteLine("subtract: "+sbtract);
+            var index = fullname.IndexOf(' ');
+            Console.WriteLine("index of:"+index);
+            Console.WriteLine(fullname.Substring(0, index));
 
-            Console.WriteLine("Minutes:" +timespan.Minutes);
-            Console.WriteLine("Total Minutes: "+timespan.TotalMinutes);
+            Console.WriteLine(fullname.Substring(index+1));
 
-           
+            Console.WriteLine("Replace : " +fullname.Replace("Mosh", "Moshhh")); 
 
-            //Console.WriteLine(TimeSpan.Parse("01-03-05"));
+            var name = fullname.Split(" ");
+            Console.WriteLine("FirstName :" +name[0]);
+            Console.WriteLine("LastName :" +name[1]);
+             
+            var str = 'a';
+            Console.WriteLine(Convert.ToByte(str));
+
+            Console.WriteLine("Trim: '{0}'" ,fullname.Trim()); //{0} Placeholder
+            
+            Console.WriteLine("Upper: '{0}','{1}'" ,fullname.Trim().ToUpper(), fullname);
+
+            float price = 19.50f;
+            Console.WriteLine(price.ToString("c"));
 
                 
         }
+
+       
     }
 }
