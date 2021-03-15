@@ -11,28 +11,20 @@ namespace Hello_World
 
         static void Main(string[] args)
         {
-            // Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+            //3 - Write a program and ask the user to enter a number. Compute the factorial of the number and print it on the console. For example, if the user enters 5, the program should calculate 5 x 4 x 3 x 2 x 1 and display it as 5! = 120.
 
-            
 
-            int sum = 0;
-            while(true)
+
+            Console.Write("Enter Number:-");
+            var number = Convert.ToInt32(Console.ReadLine());
+
+             int ans=0;
+            for (int i=1; i<=number; i++)
             {
-                Console.Write("Enter Number (break to type Ok) :");
-                var input = Console.ReadLine();
-
-                if(input == "ok")
-                {
-                    break;
-                }
-                else
-                {    
-                    sum += Convert.ToInt32(input);
-                }
                 
+                ans = number * i;
             }
-            Console.WriteLine("sum of enter number:" +sum);
-
+            Console.WriteLine("FAct No is:-" + ans);
         }
     }
 }
