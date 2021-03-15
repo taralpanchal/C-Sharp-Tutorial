@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+
+using System.IO;
 using System.Text;
 
 
@@ -7,21 +8,18 @@ namespace Hello_World
 {
     class Program
     {
-
+        
         static void Main(string[] args)
         {
-            var builder = new StringBuilder();
-            builder.Append('*', 10)
-                .AppendLine()
-                .AppendLine()
-                .Append('*', 10)
-                .Insert(5, "@", 3)
-                .Replace("@", "$")
-                .Remove(5, 3)
-                .Clear()
-                .Append("Header");
-            Console.WriteLine(builder);
+            Console.Write("Enter num1 :");
+            var num1 = Convert.ToInt32(Console.ReadLine());
+            
+            Console.Write("Enter Num2 : ");
+            var num2 = Convert.ToInt32(Console.ReadLine());
+
+           var max = (num1 > num2) ? num1 : num2;
+            Console.WriteLine(max);
         }
-        
     }
 }
+  
