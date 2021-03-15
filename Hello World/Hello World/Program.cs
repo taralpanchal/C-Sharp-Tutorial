@@ -11,19 +11,23 @@ namespace Hello_World
         
         static void Main(string[] args)
         {
-            //1 - Write a program and ask the user to enter a number. The number should be between 1 to 10.If the user enters a valid number, display "Valid" on the console.Otherwise, display "Invalid". (This logic is used a lot in applications where values entered into input boxes need to be validated.)
+            //Write a program and ask the user to enter the width and height of an image. Then tell if the image is landscape or portrait.
+                     
+            Console.Write("Enter Height: ");
+            var Height = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter Width: ");
+            var Width = Convert.ToInt32(Console.ReadLine());
+            //if (Height > Width)
+            //{
+            //    Console.WriteLine("portrait");
 
-            Console.Write("Enter number: ");
-            var num = Convert.ToInt32(Console.ReadLine());
-            if (num >= 1 && num <= 10)
-            {
-                Console.WriteLine("Valid");
-
-            }
-            else
-            {
-                Console.WriteLine("InValid");
-            }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("landscape");
+            //}
+            var img = (Height > Width) ? "Portrait" : "landscape";
+            Console.WriteLine(img);
         }
     }
 }
