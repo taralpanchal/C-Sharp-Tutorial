@@ -8,19 +8,31 @@ namespace Hello_World
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-            // 1 - Write a program to count how many numbers between 1 and 100 are divisible by 3 with no remainder.Display the count on the console.
-            var count = 0;
-            for (int i = 1; i <= 100; i++) 
+            // Write a program and continuously ask the user to enter a number or "ok" to exit. Calculate the sum of all the previously entered numbers and display it on the console.
+
+            
+
+            int sum = 0;
+            while(true)
             {
-                if(i % 3 == 0)
+                Console.Write("Enter Number (break to type Ok) :");
+                var input = Console.ReadLine();
+
+                if(input == "ok")
                 {
-                    count++;
+                    break;
                 }
+                else
+                {    
+                    sum += Convert.ToInt32(input);
+                }
+                
             }
-            Console.WriteLine(count);
+            Console.WriteLine("sum of enter number:" +sum);
+
         }
     }
 }
