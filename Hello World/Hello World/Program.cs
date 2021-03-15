@@ -18,11 +18,11 @@ namespace Hello_World
             Console.Write("Enter Number:-");
             var number = Convert.ToInt32(Console.ReadLine());
 
-             int ans=0;
+             int ans=1;
             for (int i=1; i<=number; i++)
             {
                 
-                ans = number * i;
+                ans = ans * i;
             }
             Console.WriteLine("FAct No is:-" + ans);
         }
