@@ -11,14 +11,19 @@ namespace Hello_World
         
         static void Main(string[] args)
         {
-            Console.Write("Enter num1 :");
-            var num1 = Convert.ToInt32(Console.ReadLine());
-            
-            Console.Write("Enter Num2 : ");
-            var num2 = Convert.ToInt32(Console.ReadLine());
+            //1 - Write a program and ask the user to enter a number. The number should be between 1 to 10.If the user enters a valid number, display "Valid" on the console.Otherwise, display "Invalid". (This logic is used a lot in applications where values entered into input boxes need to be validated.)
 
-           var max = (num1 > num2) ? num1 : num2;
-            Console.WriteLine(max);
+            Console.Write("Enter number: ");
+            var num = Convert.ToInt32(Console.ReadLine());
+            if (num >= 1 && num <= 10)
+            {
+                Console.WriteLine("Valid");
+
+            }
+            else
+            {
+                Console.WriteLine("InValid");
+            }
         }
     }
 }
